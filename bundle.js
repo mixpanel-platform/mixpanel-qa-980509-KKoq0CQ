@@ -785,17 +785,11 @@
 /* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var AdvancedControls, Controls, projectKey, projectSecret;
+	var AdvancedControls, Controls;
 
 	Controls = __webpack_require__(22);
 
 	AdvancedControls = __webpack_require__(30);
-
-	projectKey = '51a332481ccc40ece66dbf17cbd05cfd';
-
-	projectSecret = '2ae27c3de4e8fb16aad3600b5a30b35e';
-
-	MP.api.setCredentials(projectKey, projectSecret);
 
 	AdvancedControls.advancedControlsHandler();
 
