@@ -2124,7 +2124,7 @@
 	      $overlay.hide();
 	    });
 	  }
-
+	    
 	  module.exports = {
 	    advancedControlsHandler: advancedControlsHandler
 	  }
