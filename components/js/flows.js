@@ -32,7 +32,9 @@ function createState(state, events) {
         };
        _.each(events, function(event){
           if (filters(event, params.property_filters.global) && !_.contains(params.excluded, event.properties.featureid)) {
-            var name = _.clone(event.properties.featureid).split('::')[0];
+            var featureID = _.clone(event.properties.featureid)
+            var features = featureID.split('::')
+            var name = features[features.length - 1];
             // If I meet the start events criteria
             // Push my list of current events to my journeys
             // add the new event to my current journey

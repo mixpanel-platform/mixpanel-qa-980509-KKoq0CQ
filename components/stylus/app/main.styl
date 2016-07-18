@@ -78,7 +78,7 @@ ul
 
 .column.pull-left
   padding-right: $containerInnerPadding
-  
+
 .column.pull-right
   padding-left: $containerInnerPadding
 
@@ -421,7 +421,7 @@ ul
     height: 0
     border: 10px solid black
     border-color: transparent transparent white white
-    box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.05) 
+    box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.05)
     turn(135deg)
     borderRadiusSmall()
 
@@ -482,7 +482,7 @@ ul
 .mp-line-chart svg > rect:nth-of-type(3)
   rx: 0
   ry: 0
-  
+
 // Adapted from container-pie-chart
 .mp-pie-chart
   background-color: $containerChartContentBackgroundColor
@@ -581,7 +581,7 @@ ul
   background-size: 40px 34px
   width: 40px
   height: 34px
- 
+
 .flows-chart-legend-item
   display: inline-block
   width: $flowsChartLegendItemWidth
@@ -638,7 +638,7 @@ svg:not(:root)
   &.flows-chart-end-point
     .flows-chart-point-drop-off-percentage
       fill: $flowsChartPointDropOffBackgroundColor
-      stroke: $flowsChartPointDropOffBackgroundColor      
+      stroke: $flowsChartPointDropOffBackgroundColor
     .flows-chart-point-tooltip
       hr:nth-of-type(2)
         display: none
@@ -712,7 +712,7 @@ svg:not(:root)
   height: $flowsChartPointSize
   z-index: 3
   circle()
-  
+
   .flows-chart-point-drop-off-percentage
     fill: $flowsChartPointDropOffBackgroundColor
     stroke: $flowsChartDropOffColor
@@ -757,7 +757,7 @@ svg:not(:root)
     height: 0
     border: 10px solid black
     border-color: transparent transparent white white
-    box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.05) 
+    box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.05)
     turn(45deg)
     borderRadiusSmall()
 
@@ -771,8 +771,10 @@ svg:not(:root)
   color: $flowsChartPointTextColor
   font-size: $flowsChartPointTooltipItemSmallTextSize
   line-height: $flowsChartPointTooltipItemSmallLineHeight
-  textEllipsis()
+  overflow-x auto
   openSansBold()
+.flows-chart-point-tooltip-event-name::-webkit-scrollbar
+    display none
 
 .flows-chart-point-tooltip-event-count
   padding: $flowsChartPointTooltipItemPadding
@@ -841,7 +843,7 @@ svg:not(:root)
       stroke: #FF6E6B // TODO: variable
     &.flows-chart-end-point .flows-chart-point-contents.button-click .flows-chart-point-drop-off-percentage
       stroke: #4A6080 // TODO: variable
-         
+
     .flows-chart-point-count
       background-color: $flowsChartPointBackgroundColor
       color: $flowsChartPointTextColor
@@ -940,7 +942,7 @@ svg:not(:root)
 .mp-select
 .mp-select-text-input
   width: $buttonWidth
-  
+
 .mp-select-small
   width: 155px // TODO: variable
 
@@ -1059,16 +1061,23 @@ svg:not(:root)
 // @emmett
 .mp-super-property-select
   text-transform uppercase
-  
+
+.wide
+.wide .select_button
+.wide .select_menu
+  width 600px !important
+
+.normal
+  width 200px
+
 .mp-select.mixpanel-platform-select.event_selector_theme
   display: inline-block
-  width: $buttonWidth
+  // width: $buttonWidth
 
   .select_button
     border: 0
     background-color: white // TODO: variable
     background-image: none
-    width: $buttonWidth
     height: $buttonHeight
     line-height: $buttonLineHeight
     padding: $buttonPaddingTB $buttonPaddingLR
@@ -1081,11 +1090,10 @@ svg:not(:root)
         flipVertically()
     span
       display inline-block
-      width 155px
+      //width 155px
       textEllipsis()
 
   .select_menu
-    width: $buttonWidth
     min-width: $buttonWidth
 
     .search_box_container
@@ -1093,7 +1101,7 @@ svg:not(:root)
         padding: 7px 6px // TODO: variable
         background-image: none
         openSans()
-    
+
     .options_list
       .select_option
         font-size: $mpDropdownItemTextSize
@@ -1135,7 +1143,7 @@ svg:not(:root)
   &:hover, &:active
     background-image url('../../images/icon-settings-active@2x')
     background-color #e9f2fa
- 
+
 .modal-overlay
   position fixed
   top 0
@@ -1222,7 +1230,7 @@ svg:not(:root)
   border: 1px solid $mpMidBlue
   background-color: $mpGrey
   borderRadiusSmall()
-  
+
 #selects .mp-select-container
   display: inline-block
 
